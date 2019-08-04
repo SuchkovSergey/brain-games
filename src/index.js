@@ -123,4 +123,29 @@ const progress = () => {
   console.log(`Congratulations,${userName}!`);
 }
 
-export {calc, userStart, play, nod, progress};
+const isPrime = () => {
+  console.log('Welcome to the Brain Games!\n \nAnswer "yes" if given number is prime. Otherwise answer "no"');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!\n`);
+  for (let i=1; i<4; i++) {
+  const num = getRandomInt(10, 100); 
+  let counter = 'yes';
+  let j = 2;
+  while ((j < (num/2)) && (counter === 'yes')) {
+    if (num % j === 0) {
+      counter = 'no'; 
+    }
+    j += 1;
+  }
+  console.log(`Question: ${num}`);  
+  const answer = readlineSync.question('Your answer: ');
+  if (String(answer) === counter) {
+    console.log('Correct!\n');
+    } else {
+      return console.log(`\'${answer}\' is wrong answer ;(. Correct answer was \'${counter}\'.\n Let\'s try again, ${userName}!`);
+    }
+  }
+  console.log(`Congratulations,${userName}!`);
+}
+
+export {calc, userStart, play, nod, progress, isPrime};
