@@ -4,3 +4,5 @@ https://travis-ci.com/Sergey89274291549/frontend-project-lvl1.svg?branch=master
 
 
 <a href="https://asciinema.org/a/FvvyVqDb6l369m27YodZhFIi5"><img src="http://asciinema.org/a/FvvyVqDb6l369m27YodZhFIi5.png" width="836"/></a>
+
+<a href="https://asciinema.org/a/WlK6QmN3xszsTG2PRbreqqLRp"><img src="https://asciinema.org/a/WlK6QmN3xszsTG2PRbreqqLRp.png" width="250"/></a>
