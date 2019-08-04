@@ -6,5 +6,7 @@ publish:
 	npm publish --dry-run
 babelfile:
 	npx babel src --out-dir dist
+push:
+	sudo git push origin master
 lint:
 	npx eslint .
