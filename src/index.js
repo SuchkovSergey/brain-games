@@ -57,10 +57,10 @@ const calc = () => {
   for (let i=1; i<4; i++) {
     const numOne = getRandomInt(1, 100);
     const numTwo = getRandomInt(1, 100);
-    const sign = sign();
-    console.log(`Question: ${numOne} ${sign} ${numTwo}`);
-    const answer1 = readlineSync.question('Your answer: ');
-    const count1 = count(sign, numOne, numTwo);
+    const sign1 = sign();
+    console.log(`Question: ${numOne} ${sign1} ${numTwo}`);
+    const answer = readlineSync.question('Your answer: ');
+    const count1 = count(sign1, numOne, numTwo);
     if (Number(answer) === count1) {
       console.log('Correct!\n');
       } else {
@@ -147,5 +147,4 @@ const isPrime = () => {
   }
   console.log(`Congratulations,${userName}!`);
 }
-
 export {calc, userStart, play, nod, progress, isPrime};
