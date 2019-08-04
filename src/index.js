@@ -95,4 +95,32 @@ const nod = () => {
 }
 console.log(`Congratulations,${userName}!`);
 }
-export {calc, userStart, play, nod};
+
+const progress = () => {
+  console.log('Welcome to the Brain Games!\n \nWhat number is missing in the progression? ');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!\n`);
+  for (let i=1; i<4; i++) {
+  const startNum = getRandomInt(0, 11); 
+  const step = getRandomInt(1, 7);
+  const outNum = getRandomInt(0, 10);
+
+  const arr = [];
+  arr[0] = startNum;
+  for (let i = 1; i < 10; i++) {
+    arr[i] = arr[i-1] + step;
+  }
+  const realNum = arr[outNum];
+  arr[outNum] = '..';
+  console.log(`Question: ${arr}`);  
+  const answer = readlineSync.question('Your answer: ');
+  if (Number(answer) === realNum) {
+    console.log('Correct!\n');
+    } else {
+      return console.log(`\'${answer}\' is wrong answer ;(. Correct answer was \'${realNum}\'.\n Let\'s try again, ${userName}!`);
+    }
+  }
+  console.log(`Congratulations,${userName}!`);
+}
+
+export {calc, userStart, play, nod, progress};
