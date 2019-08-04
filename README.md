@@ -5,7 +5,7 @@
 <a href="https://codeclimate.com/github/Sergey89274291549/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/e57a29d35d6bf39420c1/test_coverage" /></a>
 
 How to use games:
-Brain-calc
+Brain-calc  
 <a href="https://asciinema.org/a/5KzYhlOuPEZ5PXOlLHHqaB8CV"><img src="https://asciinema.org/a/5KzYhlOuPEZ5PXOlLHHqaB8CV.png" width="250"/></a>
 
 Brain-even
