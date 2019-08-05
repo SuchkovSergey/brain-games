@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import {play} from '..';
-play();
+import {isEvenNum} from '..';
+isEvenNum();

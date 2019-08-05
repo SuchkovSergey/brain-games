@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import {progress} from '..';
-progress();
+import {progression} from '..';
+progression();
