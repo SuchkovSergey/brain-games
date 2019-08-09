@@ -82,12 +82,9 @@ const nod = () => {
     console.log(`Question: ${numOne} and ${numTwo}`);
     const answer = readlineSync.question('Your answer: ');
     let counter = 1;
-    let minNum = Math.min(numOne,numTwo);
-    let i = 2;
-    while (i <= minNum) {
-      let divisorOne = numOne % i === 0;
-      let divisorTwo = numTwo % i === 0; 
-      if (divisorOne && divisorTwo) {
+    let i = 1;
+    while (i<=Math.min(numOne,numTwo)) {
+      if ((numOne % i === 0) && (numTwo % i === 0)) {
         counter = i;
       }
       i += 1;
