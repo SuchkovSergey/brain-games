@@ -9,6 +9,14 @@ const nameQuestion = () => {
   console.log(`Hello, ${userName}!\n`);
 }
 
+const even = (number) => {
+  if (number % 2 === 0) {
+    return 'yes';
+  } else { 
+    return 'no';
+  }
+}
+
 const isEvenNum = () => {
   greeting();
   console.log('Answer "yes" if number even otherwise answer "no" ');
@@ -18,22 +26,15 @@ const isEvenNum = () => {
     const number = getRandomInt(1, 100);
     console.log(`Question: ${number}`);
     const answer = readlineSync.question('Your answer: ');
-    const answer1 = () => {
-      if (number % 2 === 0) {
-        return 'yes';
-      } else { 
-        return 'no';
-      }
-    }
-    const correctAnswer = answer1();
+    const correctAnswer = even(number);
     if (correctAnswer === answer) {
-    console.log('Correct!\n');
-      } else {
-        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
-      }
+      console.log('Correct!\n');
+    } else {
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
     }
-    console.log(`Congratulations,${userName}!`);
   }
+  console.log(`Congratulations,${userName}!`);
+}
 
 const sign = () => {
   const rand = getRandomInt(0,4);
@@ -68,9 +69,9 @@ const calc = () => {
     const count1 = count(sign1, numOne, numTwo);
     if (Number(answer) === count1) {
       console.log('Correct!\n');
-      } else {
-        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${count1}'.\n Let's try again, ${userName}!`);
-      }
+    } else {
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${count1}'.\n Let's try again, ${userName}!`);
+    }
   }
   console.log(`Congratulations,${userName}!`);
 }
@@ -94,11 +95,11 @@ const nod = () => {
     }
     if (Number(answer) === counter) {
       console.log('Correct!\n');
-      } else {
-        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${counter}'.\n Let's try again, ${userName}!`);
-      }
-}
-console.log(`Congratulations,${userName}!`);
+    } else {
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${counter}'.\n Let's try again, ${userName}!`);
+    }
+  }
+  console.log(`Congratulations,${userName}!`);
 }
 const progression = () => {
   greeting(); 
@@ -108,14 +109,14 @@ const progression = () => {
   for (let i=1; i<4; i++) {
     const startNum = getRandomInt(0, 11); 
     const step = getRandomInt(1, 7);
-    const outNum = getRandomInt(0, 10);
+    const blindNum = getRandomInt(0, 10);
     const arr = [];
     arr[0] = startNum;
     for (let i = 1; i < 10; i++) {
       arr[i] = arr[i-1] + step;
     }
-    const realNum = arr[outNum];
-    arr[outNum] = '..';
+    const realNum = arr[blindNum];
+    arr[blindNum] = '..';
     console.log(`Question: ${arr}`);
     const answer = readlineSync.question('Your answer: ');
     if (Number(answer) === realNum) {
@@ -132,21 +133,21 @@ const isPrime = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
   for (let i=1; i<4; i++) {
-  const num = getRandomInt(10, 100); 
-  let counter = 'yes';
-  let j = 2;
-  while ((j < (num/2)) && (counter === 'yes')) {
-    if (num % j === 0) {
-      counter = 'no'; 
+    const num = getRandomInt(10, 100);
+    let correctAnswer = 'yes';
+    let j = 2;
+    while (j < (num/2)) {
+      if (num % j === 0) {
+        correctAnswer = 'no';
+      }
+      j += 1;
     }
-    j += 1;
-  }
-  console.log(`Question: ${num}`);  
-  const answer = readlineSync.question('Your answer: ');
-  if (String(answer) === counter) {
-    console.log('Correct!\n');
+    console.log(`Question: ${num}`);
+    const answer = readlineSync.question('Your answer: ');
+    if (String(answer) === correctAnswer) {
+      console.log('Correct!\n');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${counter}'.\n Let's try again, ${userName}!`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n Let's try again, ${userName}!`);
     }
   }
   console.log(`Congratulations,${userName}!`);
