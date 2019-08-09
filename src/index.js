@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-
 const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -8,7 +7,6 @@ const nameQuestion = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 }
-
 const even = (number) => {
   if (number % 2 === 0) {
     return 'yes';
@@ -16,7 +14,6 @@ const even = (number) => {
     return 'no';
   }
 }
-
 const isEvenNum = () => {
   greeting();
   console.log('Answer "yes" if number even otherwise answer "no" ');
@@ -35,7 +32,6 @@ const isEvenNum = () => {
   }
   console.log(`Congratulations,${userName}!`);
 }
-
 const sign = () => {
   const rand = getRandomInt(0,4);
   if (rand === 1) {
@@ -86,9 +82,12 @@ const nod = () => {
     console.log(`Question: ${numOne} and ${numTwo}`);
     const answer = readlineSync.question('Your answer: ');
     let counter = 1;
-    let i = 1;
-    while (i<=Math.min(numOne,numTwo)) {
-      if ((numOne % i === 0) && (numTwo % i === 0)) {
+    let minNum = Math.min(numOne,numTwo);
+    let i = 2;
+    while (i <= minNum) {
+      let divisorOne = numOne % i === 0;
+      let divisorTwo = numTwo % i === 0; 
+      if (divisorOne && divisorTwo) {
         counter = i;
       }
       i += 1;
