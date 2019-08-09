@@ -1,8 +1,6 @@
-<a href="https://travis-ci.com/Sergey89274291549/frontend-project-lvl1.svg?branch=master"><img src="https://travis-ci.com/Sergey89274291549/frontend-project-lvl1.svg?branch=master" width="80"/></a>
+<a href="https://travis-ci.com/Sergey89274291549/frontend-project-lvl1"><img src="https://travis-ci.com/Sergey89274291549/frontend-project-lvl1.svg?branch=master" width="80"/></a>
 
 <a href="https://codeclimate.com/github/Sergey89274291549/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/e57a29d35d6bf39420c1/maintainability" /></a>
-
-<a href="https://codeclimate.com/github/Sergey89274291549/frontend-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/e57a29d35d6bf39420c1/test_coverage" /></a>
 
 How to use games:
 

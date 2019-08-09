@@ -11,7 +11,7 @@ const nameQuestion = () => {
 
 const isEvenNum = () => {
   greeting();
-  console.log('Answer \"yes\" if number even otherwise answer \"no\" ');
+  console.log('Answer "yes" if number even otherwise answer "no" ');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
   for (let i=1; i<4; i++) {
@@ -29,7 +29,7 @@ const isEvenNum = () => {
     if (correctAnswer === answer) {
     console.log('Correct!\n');
       } else {
-        return console.log(`\'${answer}\' is wrong answer ;(. Correct answer was \'${correctAnswer}\'.\nLet\'s try again, ${userName}!`);
+        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
       }
     }
     console.log(`Congratulations,${userName}!`);
@@ -45,7 +45,6 @@ const sign = () => {
       return '*';
     }
   }
-
 const count = (sign1, numOne, numTwo) => {
   if (sign1 === '+') {
     return numOne + numTwo;
@@ -55,7 +54,6 @@ const count = (sign1, numOne, numTwo) => {
     return numOne * numTwo;
   }
 }
-
 const calc = () => {
   greeting();
   console.log('What is the result of the expression? ');
@@ -71,12 +69,11 @@ const calc = () => {
     if (Number(answer) === count1) {
       console.log('Correct!\n');
       } else {
-        return console.log(`\'${answer}\' is wrong answer ;(. Correct answer was \'${count1}\'.\n Let\'s try again, ${userName}!`);
+        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${count1}'.\n Let's try again, ${userName}!`);
       }
   }
   console.log(`Congratulations,${userName}!`);
 }
-
 const nod = () => {
   greeting();
   console.log('Find the greatest common divisor of given numbers. ');
@@ -98,12 +95,11 @@ const nod = () => {
     if (Number(answer) === counter) {
       console.log('Correct!\n');
       } else {
-        return console.log(`\'${answer}\' is wrong answer ;(. Correct answer was \'${counter}\'.\n Let\'s try again, ${userName}!`);
+        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${counter}'.\n Let's try again, ${userName}!`);
       }
 }
 console.log(`Congratulations,${userName}!`);
 }
-
 const progression = () => {
   greeting(); 
   console.log('What number is missing in the progression? ');
@@ -125,12 +121,11 @@ const progression = () => {
     if (Number(answer) === realNum) {
       console.log('Correct!\n');
     } else {
-      return console.log(`\'${answer}\' is wrong answer ;(. Correct answer was \'${realNum}\'.\n Let\'s try again, ${userName}!`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${realNum}'.\n Let's try again, ${userName}!`);
     }
   }
   console.log(`Congratulations,${userName}!`);
 }
-
 const isPrime = () => {
   greeting(); 
   console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
@@ -151,7 +146,7 @@ const isPrime = () => {
   if (String(answer) === counter) {
     console.log('Correct!\n');
     } else {
-      return console.log(`\'${answer}\' is wrong answer ;(. Correct answer was \'${counter}\'.\n Let\'s try again, ${userName}!`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${counter}'.\n Let's try again, ${userName}!`);
     }
   }
   console.log(`Congratulations,${userName}!`);

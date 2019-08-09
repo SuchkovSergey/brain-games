@@ -4,9 +4,9 @@ start:
 	npx babel-node src/bin/brain-games.js
 publish:
 	npm publish --dry-run
-babelfile:
-	npx babel src --out-dir dist
 push:
 	sudo git push origin master
+build:
+	npm run build
 lint:
 	npx eslint .

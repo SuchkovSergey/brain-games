@@ -1,5 +1,5 @@
 node_modules
 dist
-package.json.save
-Makefile.save
-README.md.save
+*.log
+*.save
+.package-lock.json.swp
