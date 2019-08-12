@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-import {isPrime} from '..';
+import { isPrime } from '..';
+
 isPrime();

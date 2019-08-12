@@ -1,10 +1,10 @@
 {
   "name": "brain-games",
-  "version": "1.0.0",
+  "version": "1.9.16",
   "description": "my first package",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "build": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
   "bin": {
@@ -33,9 +33,7 @@
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.18.2",
-    "make": "^0.8.1",
-    "fstream": ">=1.0.12"
+    "eslint-plugin-import": "^2.18.2"
   },
   "dependencies": {
     "readline-sync": "^1.4.9"

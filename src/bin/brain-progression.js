@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-import {progression} from '..';
+import { progression } from '..';
+
 progression();

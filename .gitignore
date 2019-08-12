@@ -2,4 +2,4 @@ node_modules
 dist
 *.log
 *.save
-.package-lock.json.swp
+*.swp

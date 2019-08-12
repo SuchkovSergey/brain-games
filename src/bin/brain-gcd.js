@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-import {nod} from '..';
+import { nod } from '..';
+
 nod();

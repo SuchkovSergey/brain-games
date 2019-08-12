@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-import {isEvenNum} from '..';
+import { isEvenNum } from '..';
+
 isEvenNum();
