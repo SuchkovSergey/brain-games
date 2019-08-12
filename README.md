@@ -6,24 +6,24 @@ How to use games:
 
 Brain-games
 
-<a href="https://asciinema.org/a/8CAf48x2XVI4KVn2EULMJYsqR"><img src="https://asciinema.org/a/8CAf48x2XVI4KVn2EULMJYsqR.png" width="250"/></a>
+<a href="https://asciinema.org/a/xLKZRcmSiovOuyYDwwXdNBNBH"><img src="https://asciinema.org/a/xLKZRcmSiovOuyYDwwXdNBNBH.png" width="250"/></a>
 
 Brain-calc
   
-<a href="https://asciinema.org/a/AZyDUab4svQ9byfVBKeT1sEue"><img src="https://asciinema.org/a/AZyDUab4svQ9byfVBKeT1sEue.png" width="250"/></a>
+<a href="https://asciinema.org/a/lBrSfJklQA5NbEyzybyFXgggg"><img src="https://asciinema.org/a/lBrSfJklQA5NbEyzybyFXgggg.png" width="250"/></a>
 
 Brain-even
 
-<a href="https://asciinema.org/a/FFWjhyRcEM3FGLSyYKTIKeEBT"><img src="https://asciinema.org/a/FFWjhyRcEM3FGLSyYKTIKeEBT.png" width="250"/></a>
+<a href="https://asciinema.org/a/VLJP1dO2VYWZO8pGQ2UMFJXGQ"><img src="https://asciinema.org/a/VLJP1dO2VYWZO8pGQ2UMFJXGQ.png" width="250"/></a>
 
-Brain-gdc
+Brain-gcd
 
-<a href="https://asciinema.org/a/vL5M7jqU2iiwAth6LuiQcFIvj"><img src="https://asciinema.org/a/vL5M7jqU2iiwAth6LuiQcFIvj.png" width="250"/></a>
+<a href="https://asciinema.org/a/0s98r18wkZMPR3yNLVeuBi3JM"><img src="https://asciinema.org/a/0s98r18wkZMPR3yNLVeuBi3JM.png" width="250"/></a>
 
 Brain-progression
 
-<a href="https://asciinema.org/a/9zdydAivdpdOgvAwgQA1r4OnR"><img src="https://asciinema.org/a/9zdydAivdpdOgvAwgQA1r4OnR.png" width="250"/></a>
+<a href="https://asciinema.org/a/MrKI08Ir0dFxqQRBBrX3JE5qt"><img src="https://asciinema.org/a/MrKI08Ir0dFxqQRBBrX3JE5qt.png" width="250"/></a>
 
 Brain-prime
 
-<a href="https://asciinema.org/a/WRNiXpGfHOjuG9G9GAXZfoqfy"><img src="https://asciinema.org/a/WRNiXpGfHOjuG9G9GAXZfoqfy.png" width="250"/></a>
+<a href="https://asciinema.org/a/pyDOiO1Hc2j0OkUarjrGamCcu"><img src="https://asciinema.org/a/pyDOiO1Hc2j0OkUarjrGamCcu.png" width="250"/></a>
