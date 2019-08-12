@@ -1,6 +1,6 @@
 {
   "name": "brain-games",
-  "version": "1.9.16",
+  "version": "1.9.17",
   "description": "my first package",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

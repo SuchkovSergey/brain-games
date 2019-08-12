@@ -6,7 +6,7 @@ publish:
 	npm publish --dry-run
 push:
 	sudo git push origin master
-build:
-	npm run build
 lint:
 	npx eslint .
+build:
+	npm run build
