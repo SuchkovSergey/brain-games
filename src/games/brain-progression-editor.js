@@ -1,7 +1,6 @@
-import readlineSync from 'readline-sync';
 import { cons, car, cdr } from '@hexlet/pairs';
 import {
-  greeting, greetingName, loop, getRandomInt,
+  greeting, getRandomInt, gameMaker,
 } from '..';
 
 const argument = () => {
@@ -19,13 +18,6 @@ const argument = () => {
 };
 const questionPrint = argument1 => console.log(`Sequence of numbers: ${car(cdr(cdr(cdr(argument1))))}`);
 const correctAnswerFinder = argument2 => Number(cdr(cdr(cdr(cdr(argument2)))));
-
-const progression = () => {
-  greeting();
-  console.log('What number is missing in the progression?');
-  const userName = readlineSync.question('May I have your name? ');
-  greetingName(userName);
-  loop(correctAnswerFinder, userName, questionPrint, argument);
-};
-
+const task = () => console.log('What number is missing in the progression?');
+const progression = () => gameMaker(greeting, task, correctAnswerFinder, questionPrint, argument);
 export default progression;

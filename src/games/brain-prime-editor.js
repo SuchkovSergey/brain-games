@@ -1,6 +1,5 @@
-import readlineSync from 'readline-sync';
 import {
-  greeting, greetingName, loop, getRandomInt,
+  greeting, getRandomInt, gameMaker,
 } from '..';
 
 const argument = () => getRandomInt(1, 100);
@@ -12,17 +11,11 @@ const correctAnswerFinder = (num) => {
     if (num % j === 0) {
       correctAnswer = 'no';
     }
-   j += 1;
+    j += 1;
   }
   return correctAnswer;
 };
-
-const isPrime = () => {
-  greeting();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
-  const userName = readlineSync.question('May I have your name? ');
-  greetingName(userName);
-  loop(correctAnswerFinder, userName, questionPrint, argument);
-};
+const task = () => console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
+const isPrime = () => gameMaker(greeting, task, correctAnswerFinder, questionPrint, argument);
 
 export default isPrime;

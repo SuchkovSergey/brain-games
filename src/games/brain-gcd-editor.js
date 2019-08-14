@@ -1,7 +1,6 @@
-import readlineSync from 'readline-sync';
 import { cons, car, cdr } from '@hexlet/pairs';
 import {
-  greeting, greetingName, loop, getRandomInt,
+  greeting, getRandomInt, gameMaker,
 } from '..';
 
 const argument = () => cons(getRandomInt(1, 100), getRandomInt(1, 100));
@@ -19,13 +18,7 @@ const correctAnswerFinder = (argument2) => {
   }
   return counter;
 };
-
-const gcd = () => {
-  greeting();
-  console.log('Find the greatest common divisor of given numbers!');
-  const userName = readlineSync.question('May I have your name? ');
-  greetingName(userName);
-  loop(correctAnswerFinder, userName, questionPrint, argument);
-};
+const task = () => console.log('Find the greatest common divisor of given numbers!');
+const gcd = () => gameMaker(greeting, task, correctAnswerFinder, questionPrint, argument);
 
 export default gcd;
