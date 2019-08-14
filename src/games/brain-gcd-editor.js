@@ -20,5 +20,4 @@ const correctAnswerFinder = (argument2) => {
 };
 const task = () => console.log('Find the greatest common divisor of given numbers!');
 const gcd = () => gameMaker(greeting, task, correctAnswerFinder, questionPrint, argument);
-
 export default gcd;

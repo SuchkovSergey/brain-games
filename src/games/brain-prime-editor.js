@@ -17,5 +17,4 @@ const correctAnswerFinder = (num) => {
 };
 const task = () => console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
 const isPrime = () => gameMaker(greeting, task, correctAnswerFinder, questionPrint, argument);
-
 export default isPrime;
