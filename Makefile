@@ -10,3 +10,5 @@ lint:
 	npx eslint .
 build:
 	npm run build
+fix:
+	sudo npx eslint --fix .

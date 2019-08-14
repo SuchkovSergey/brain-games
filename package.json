@@ -1,6 +1,6 @@
 {
   "name": "brain-games",
-  "version": "1.9.17",
+  "version": "1.9.19",
   "description": "my first package",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -36,6 +36,7 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "dependencies": {
+    "@hexlet/pairs": "^1.0.10",
     "readline-sync": "^1.4.9"
   }
 }
