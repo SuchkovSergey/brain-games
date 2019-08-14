@@ -4,6 +4,8 @@ import {
   greeting, greetingName, loop, getRandomInt,
 } from '..';
 
+const argument = () => cons(getRandomInt(1, 100), getRandomInt(1, 100));
+const questionPrint = argument1 => console.log(`Question: ${Number(car(argument1))} and ${Number(cdr(argument1))}`);
 const correctAnswerFinder = (argument2) => {
   const numOne = Number(car(argument2));
   const numTwo = Number(cdr(argument2));
@@ -23,8 +25,6 @@ const gcd = () => {
   console.log('Find the greatest common divisor of given numbers!');
   const userName = readlineSync.question('May I have your name? ');
   greetingName(userName);
-  const argument = () => cons(getRandomInt(1, 100), getRandomInt(1, 100));
-  const questionPrint = argument1 => console.log(`Question: ${Number(car(argument1))} and ${Number(cdr(argument1))}`);
   loop(correctAnswerFinder, userName, questionPrint, argument);
 };
 
