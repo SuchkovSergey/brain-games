@@ -3,24 +3,14 @@ import {
   greeting, getRandomInt, gameMaker,
 } from '..';
 
-const sign = () => {
-  const rand = getRandomInt(0, 4);
-  let answer = '*';
-  if (rand === 1) {
-    answer = '+';
-  } if (rand === 2) {
-    answer = '-';
-  }
-  return answer;
-};
+const sign = () => '+-*'.charAt(Math.floor(Math.random() * '+-*'.length));
 const count = (sign1, numOne, numTwo) => {
-  let answer = numOne * numTwo;
   if (sign1 === '+') {
-    answer = numOne + numTwo;
+    return numOne + numTwo;
   } if (sign1 === '-') {
-    answer = numOne - numTwo;
+    return numOne - numTwo;
   }
-  return answer;
+  return numOne * numTwo;
 };
 const correctAnswerFinder = (argument2) => {
   const numOne = Number(car(cdr(argument2)));

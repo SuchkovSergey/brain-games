@@ -3,9 +3,8 @@ import {
   greeting, greetingName,
 } from '..';
 
-const welcomeGames = () => {
+export default () => {
   greeting();
   const userName = readlineSync.question('May I have your name? ');
   greetingName(userName);
 };
-export default welcomeGames;
