@@ -1,6 +1,6 @@
 import { cons, car, cdr } from '@hexlet/pairs';
 import {
-  greeting, getRandomInt, gameMaker,
+  getRandomInt, gameMaker, questionPrint as calcQuestion, task as calcTask,
 } from '..';
 
 const sign = () => '+-*'.charAt(Math.floor(Math.random() * '+-*'.length));
@@ -19,7 +19,7 @@ const correctAnswerFinder = (argument2) => {
   return count(sign1, numOne, numTwo);
 };
 const argument = () => cons(sign(), cons(getRandomInt(1, 100), getRandomInt(1, 100)));
-const questionPrint = argument1 => console.log(`${Number(car(cdr(argument1)))} ${String(car(argument1))} ${Number(cdr(cdr(argument1)))}`);
-const task = () => console.log('What is the result of the expression? ');
-const calc = () => gameMaker(greeting, task, correctAnswerFinder, questionPrint, argument);
+const questionPrint = argument1 => calcQuestion(`${Number(car(cdr(argument1)))} ${String(car(argument1))} ${Number(cdr(cdr(argument1)))}`);
+const task = () => calcTask('What is the result of the expression? ');
+const calc = () => gameMaker(task, correctAnswerFinder, questionPrint, argument);
 export default calc;

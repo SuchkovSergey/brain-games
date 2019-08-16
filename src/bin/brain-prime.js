@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import isPrime from '../games/brain-prime-editor';
+import isPrime from '../games/prime';
 
 isPrime();

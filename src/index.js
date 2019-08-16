@@ -23,14 +23,15 @@ const loop = (func, userName, funcprint, argument) => {
   }
   console.log(`Congratulations,${userName}!`);
 };
-const gameMaker = (greeting1, task1, correctAnswerFinder1, questionPrint1, argument1) => {
-  greeting1();
+const gameMaker = (task1, correctAnswerFinder1, questionPrint1, argument1) => {
+  greeting();
   task1();
   const userName = readlineSync.question('May I have your name? ');
   greetingName(userName);
   loop(correctAnswerFinder1, userName, questionPrint1, argument1);
 };
-
+const questionPrint = argument2 => console.log(argument2);
+const task = gameTask => console.log(gameTask);
 export {
-  greeting, greetingName, getRandomInt, gameMaker,
+  greeting, greetingName, getRandomInt, gameMaker, questionPrint, task,
 };

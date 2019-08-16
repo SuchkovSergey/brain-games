@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import isEvenNum from '../games/brain-even-editor';
+import isEvenNum from '../games/even';
 
 isEvenNum();

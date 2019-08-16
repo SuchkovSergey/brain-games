@@ -1,10 +1,9 @@
 import { cons, car, cdr } from '@hexlet/pairs';
 import {
-  greeting, getRandomInt, gameMaker,
+  getRandomInt, gameMaker, questionPrint as gcdQuestion, task as gcdTask,
 } from '..';
 
 const argument = () => cons(getRandomInt(1, 100), getRandomInt(1, 100));
-const questionPrint = argument1 => console.log(`Question: ${Number(car(argument1))} and ${Number(cdr(argument1))}`);
 const correctAnswerFinder = (argument2) => {
   const numOne = Number(car(argument2));
   const numTwo = Number(cdr(argument2));
@@ -18,6 +17,7 @@ const correctAnswerFinder = (argument2) => {
   }
   return counter;
 };
-const task = () => console.log('Find the greatest common divisor of given numbers!');
-const gcd = () => gameMaker(greeting, task, correctAnswerFinder, questionPrint, argument);
+const questionPrint = argument1 => gcdQuestion(`Question: ${Number(car(argument1))} and ${Number(cdr(argument1))}`);
+const task = () => gcdTask('Find the greatest common divisor of given numbers!');
+const gcd = () => gameMaker(task, correctAnswerFinder, questionPrint, argument);
 export default gcd;
