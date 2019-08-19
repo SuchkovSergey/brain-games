@@ -5,9 +5,9 @@ import {
 
 const isEven = num => num % 2 === 0;
 const argument = () => {
-  const num = getRandomInt(1, 100);
-  const correctAnswer = isEven(num) ? 'yes' : 'no';
-  return cons(correctAnswer, num);
+  const number = getRandomInt(1, 101);
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  return cons(correctAnswer, number);
 };
 const questionPrint = argument1 => `Your number: ${Number(cdr(argument1))}`;
 const task = 'Answer "yes" if number even otherwise answer "no"';
