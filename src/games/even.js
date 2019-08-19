@@ -1,11 +1,15 @@
+import { cons, cdr } from '@hexlet/pairs';
 import {
-  getRandomInt, gameMaker, questionPrint as evenQuestion, task as evenTask,
+  getRandomInt, gameMaker,
 } from '..';
 
-const argument = () => getRandomInt(1, 100);
 const isEven = num => num % 2 === 0;
-const correctAnswerFinder = num => (isEven(num) ? 'yes' : 'no');
-const questionPrint = argument1 => evenQuestion(`Your number: ${Number(argument1)}`);
-const task = () => evenTask('Answer "yes" if number even otherwise answer "no"');
-const isEvenNum = () => gameMaker(task, correctAnswerFinder, questionPrint, argument);
+const argument = () => {
+  const num = getRandomInt(1, 100);
+  const correctAnswer = isEven(num) ? 'yes' : 'no';
+  return cons(correctAnswer, num);
+};
+const questionPrint = argument1 => `Your number: ${Number(cdr(argument1))}`;
+const task = 'Answer "yes" if number even otherwise answer "no"';
+const isEvenNum = () => gameMaker(task, questionPrint, argument);
 export default isEvenNum;

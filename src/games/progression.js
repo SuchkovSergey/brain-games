@@ -1,6 +1,6 @@
-import { cons, car, cdr } from '@hexlet/pairs';
+import { cons, cdr } from '@hexlet/pairs';
 import {
-  getRandomInt, gameMaker, questionPrint as progressionQuestion, task as progressionTask,
+  getRandomInt, gameMaker,
 } from '..';
 
 const argument = () => {
@@ -14,10 +14,9 @@ const argument = () => {
   }
   const blindArr = arr[blindNum];
   arr[blindNum] = '..';
-  return cons(startNum, cons(step, cons(blindNum, cons(arr, blindArr))));
+  return cons(blindArr, arr);
 };
-const correctAnswerFinder = argument2 => Number(cdr(cdr(cdr(cdr(argument2)))));
-const questionPrint = argument1 => progressionQuestion(`Sequence of numbers: ${car(cdr(cdr(cdr(argument1))))}`);
-const task = () => progressionTask('What number is missing in the progression?');
-const progression = () => gameMaker(task, correctAnswerFinder, questionPrint, argument);
+const questionPrint = argument1 => `Sequence of numbers: ${cdr(argument1)}`;
+const task = 'What number is missing in the progression?';
+const progression = () => gameMaker(task, questionPrint, argument);
 export default progression;
