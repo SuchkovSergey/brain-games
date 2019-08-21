@@ -1,12 +1,11 @@
 import { cons, car, cdr } from '@hexlet/pairs';
-import {
-  getRandomInt, gameMaker,
-} from '..';
+import { getRandomInt, gameMaker } from '..';
 
-const sign = () => '+-*'.charAt(Math.floor(Math.random() * '+-*'.length));
-const count = (sign1, numOne, numTwo) => {
+const signs = '+-*';
+const signMaker = () => signs.charAt(getRandomInt(1, signs.length));
+const count = (sign, numOne, numTwo) => {
   let result;
-  switch (sign1) {
+  switch (sign) {
     case '+':
       result = numOne + numTwo;
       break;
@@ -19,14 +18,13 @@ const count = (sign1, numOne, numTwo) => {
   }
   return result;
 };
-const argument = () => {
-  const sign1 = sign();
+const argumentMaker = () => {
+  const sign = signMaker();
   const numOne = getRandomInt(1, 100);
   const numTwo = getRandomInt(1, 100);
-  const correctAnswer = count(sign1, numOne, numTwo);
-  return cons(correctAnswer, cons(sign1, cons(numOne, numTwo)));
+  const correctAnswer = count(sign, numOne, numTwo);
+  return cons(correctAnswer, cons(sign, cons(numOne, numTwo)));
 };
-const questionPrint = argument1 => `${Number(car(cdr(cdr(argument1))))} ${String(car(cdr(argument1)))} ${Number(cdr(cdr(cdr(argument1))))}`;
+const questionPrint = argument => `${Number(car(cdr(cdr(argument))))} ${String(car(cdr(argument)))} ${Number(cdr(cdr(cdr(argument))))}`;
 const task = 'What is the result of the expression? ';
-const calc = () => gameMaker(task, questionPrint, argument);
-export default calc;
+export default () => gameMaker(task, questionPrint, argumentMaker);

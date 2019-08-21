@@ -1,7 +1,5 @@
 import readlineSync from 'readline-sync';
-import {
-  greeting, greetingName,
-} from '..';
+import { greeting, greetingName } from '..';
 
 export default () => {
   greeting();
