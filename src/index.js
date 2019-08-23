@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync';
-import { car } from '@hexlet/pairs';
+import { car, cdr } from '@hexlet/pairs';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const greeting = () => console.log('Welcome to the Brain Games!\n');
 const greetingName = userName => console.log(`Hello, ${userName}!\n`);
 const endGame = (answer, correctAnswer, userName) => {
@@ -12,10 +11,11 @@ const endGame = (answer, correctAnswer, userName) => {
     console.log(`Let's try again, ${userName}!`);
   }
 };
-const loop = (userName, funcPrint, argumentMaker) => {
-  for (let i = 1; i < 4; i += 1) {
+const loop = (userName, argumentMaker) => {
+  const numberOfIteration = 3;
+  for (let i = 1; i <= numberOfIteration; i += 1) {
     const argument = argumentMaker();
-    console.log(`Question: ${funcPrint(argument)}`);
+    console.log(`Question: ${cdr(argument)}`);
     const answer = readlineSync.question('Your answer: ');
     const correctAnswer = car(argument);
     endGame(answer, correctAnswer, userName);
@@ -23,14 +23,12 @@ const loop = (userName, funcPrint, argumentMaker) => {
   }
   console.log(`Congratulations,${userName}!`);
 };
-const gameMaker = (task, questionPrint, argumentMaker) => {
+const gameMaker = (task, argumentMaker) => {
   greeting();
   console.log(task);
   const userName = readlineSync.question('May I have your name? ');
   greetingName(userName);
-  loop(userName, questionPrint, argumentMaker);
+  loop(userName, argumentMaker);
 };
 
-export {
-  greeting, greetingName, getRandomInt, gameMaker,
-};
+export default gameMaker;
