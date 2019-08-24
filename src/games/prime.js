@@ -14,7 +14,7 @@ const isPrime = (num) => {
   return true;
 };
 const argumentMaker = () => {
-  const num = getRandomInt(1, 100);
+  const num = getRandomInt(-100, 100);
   const correctAnswer = isPrime(num) ? 'yes' : 'no';
   const question = `${num}`;
   const finalArgument = cons(correctAnswer, question);
