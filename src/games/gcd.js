@@ -8,13 +8,16 @@ const gcdFinder = (numOne, numTwo) => {
   const remainder = maxNum % minNum;
   return (remainder === 0) ? minNum : gcdFinder(minNum, remainder);
 };
-const argumentMaker = () => {
+
+const generateGameData = () => {
   const numOne = getRandomInt(-100, 100);
   const numTwo = getRandomInt(-100, 100);
-  const correctAnswer = gcdFinder(numOne, numTwo);
-  const question = `${numOne} and ${numTwo}`;
-  const finalArgument = cons(correctAnswer, question);
-  return finalArgument;
+  const correctAnswer = String(gcdFinder(numOne, numTwo));
+  const gameQuestion = `${numOne} and ${numTwo}`;
+  const gameData = cons(correctAnswer, gameQuestion);
+  return gameData;
 };
+
 const task = 'Find the greatest common divisor of given numbers!';
-export default () => gameMaker(task, argumentMaker);
+
+export default () => gameMaker(task, generateGameData);

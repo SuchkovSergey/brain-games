@@ -13,13 +13,15 @@ const isPrime = (num) => {
   }
   return true;
 };
-const argumentMaker = () => {
+
+const generateGameData = () => {
   const num = getRandomInt(-100, 100);
   const correctAnswer = isPrime(num) ? 'yes' : 'no';
-  const question = `${num}`;
-  const finalArgument = cons(correctAnswer, question);
-  return finalArgument;
+  const gameQuestion = String(num);
+  const gameData = cons(correctAnswer, gameQuestion);
+  return gameData;
 };
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-export default () => gameMaker(task, argumentMaker);
+
+export default () => gameMaker(task, generateGameData);

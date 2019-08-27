@@ -3,7 +3,8 @@ import gameMaker from '..';
 import getRandomInt from '../utils';
 
 const signs = '+-*';
-const signMaker = () => signs.charAt(getRandomInt(1, signs.length));
+const signMaker = () => signs.charAt(getRandomInt(0, signs.length));
+
 const count = (sign, numOne, numTwo) => {
   let result;
   switch (sign) {
@@ -19,14 +20,17 @@ const count = (sign, numOne, numTwo) => {
   }
   return result;
 };
-const argumentMaker = () => {
+
+const generateGameData = () => {
   const sign = signMaker();
   const numOne = getRandomInt(1, 100);
   const numTwo = getRandomInt(1, 100);
-  const correctAnswer = count(sign, numOne, numTwo);
-  const question = `${numOne} ${sign} ${numTwo}`;
-  const finalArgument = cons(correctAnswer, question);
-  return finalArgument;
+  const correctAnswer = String(count(sign, numOne, numTwo));
+  const gameQuestion = `${numOne} ${sign} ${numTwo}`;
+  const gameData = cons(correctAnswer, gameQuestion);
+  return gameData;
 };
+
 const task = 'What is the result of the expression?';
-export default () => gameMaker(task, argumentMaker);
+
+export default () => gameMaker(task, generateGameData);

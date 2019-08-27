@@ -2,21 +2,23 @@ import { cons } from '@hexlet/pairs';
 import gameMaker from '..';
 import getRandomInt from '../utils';
 
-const amountOfNumbers = 10;
-const argumentMaker = () => {
+const progressionLength = 10;
+
+const generateGameData = () => {
   const startNum = getRandomInt(-10, 20);
   const step = getRandomInt(1, 7);
-  const blindNum = getRandomInt(0, amountOfNumbers);
+  const blindNum = getRandomInt(0, progressionLength);
   const arr = [];
-  for (let j = 0; j < amountOfNumbers; j += 1) {
+  for (let j = 0; j < progressionLength; j += 1) {
     arr[j] = startNum + j * step;
   }
-  const correctAnswer = arr[blindNum];
+  const correctAnswer = String(arr[blindNum]);
   arr[blindNum] = '..';
-  const question = `${arr.join(' ')}`;
-  const finalArgument = cons(correctAnswer, question);
-  return finalArgument;
+  const gameQuestion = `${arr.join(' ')}`;
+  const gameData = cons(correctAnswer, gameQuestion);
+  return gameData;
 };
 
 const task = 'What number is missing in the progression?';
-export default () => gameMaker(task, argumentMaker);
+
+export default () => gameMaker(task, generateGameData);
