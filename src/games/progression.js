@@ -14,7 +14,7 @@ const generateGameData = () => {
   }
   const correctAnswer = String(arr[blindNum]);
   arr[blindNum] = '..';
-  const gameQuestion = `${arr.join(' ')}`;
+  const gameQuestion = arr.join(' ');
   const gameData = cons(correctAnswer, gameQuestion);
   return gameData;
 };
