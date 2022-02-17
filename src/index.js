@@ -24,9 +24,9 @@ const createGameRound = (userName, generateGameData) => {
 
 const createGame = (task, generateGameData) => {
     greeting();
-    console.log(task);
     const userName = readlineSync.question('May I have your name? ');
     greetingName(userName);
+    console.log(task);
     createGameRound(userName, generateGameData);
 };
 

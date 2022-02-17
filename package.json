@@ -1,40 +1,35 @@
 {
-  "name": "brain-games",
-  "version": "1.4.0",
-  "description": "my first package",
-  "scripts": {
-    "build": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build"
-  },
-  "bin": {
-    "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bin/brain-gcd.js",
-    "brain-factorial": "dist/bin/brain-factorial.js",
-    "brain-progression": "dist/bin/brain-progression.js",
-    "brain-prime": "dist/bin/brain-prime.js"
-  },
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "hexlet"
-  ],
-  "author": "Sergei",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/node": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-eslint": "^10.0.2",
-    "cross-env": "^5.2.0",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.18.2"
-  },
-  "dependencies": {
-    "readline-sync": "^1.4.9"
-  }
+    "name": "brain-games",
+    "version": "1.4.1",
+    "description": "my first package",
+    "scripts": {
+        "build": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline",
+        "prepublishOnly": "npm run build"
+    },
+    "bin": {
+        "brain-even": "dist/bin/brain-even.js",
+        "brain-calc": "dist/bin/brain-calc.js",
+        "brain-gcd": "dist/bin/brain-gcd.js",
+        "brain-factorial": "dist/bin/brain-factorial.js",
+        "brain-progression": "dist/bin/brain-progression.js",
+        "brain-prime": "dist/bin/brain-prime.js"
+    },
+    "files": [ "dist" ],
+    "author": "Sergei",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.5.5",
+        "@babel/core": "^7.5.5",
+        "@babel/node": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "babel-eslint": "^10.0.2",
+        "cross-env": "^5.2.0",
+        "eslint": "^6.1.0",
+        "eslint-config-airbnb-base": "^13.2.0",
+        "eslint-plugin-babel": "^5.3.0",
+        "eslint-plugin-import": "^2.18.2"
+    },
+    "dependencies": {
+        "readline-sync": "^1.4.9"
+    }
 }

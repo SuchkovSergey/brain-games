@@ -3,7 +3,7 @@ install:
 publish:
 	npm publish --dry-run
 push:
-	sudo git push origin master
+	git push origin master
 lint:
 	npx eslint .
 build:
