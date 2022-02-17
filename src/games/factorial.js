@@ -1,23 +1,21 @@
-import { cons } from '@hexlet/pairs';
-import gameMaker from '..';
-import getRandomInt from '../utils';
+import createGame from '..';
+import { getRandomInt } from '../utils';
 
-const factorialFinder = (num) => {
-  let acc = 1;
-  for (let i = 1; i <= num; i += 1) {
-    acc *= i;
-  }
-  return acc;
+const getFactorial = (num) => {
+    let acc = 1;
+    for (let i = 1; i <= num; i += 1) {
+        acc *= i;
+    }
+    return acc;
 };
 
 const generateGameData = () => {
-  const num = getRandomInt(1, 10);
-  const correctAnswer = String(factorialFinder(num));
-  const gameQuestion = String(num);
-  const gameData = cons(correctAnswer, gameQuestion);
-  return gameData;
+    const num = getRandomInt(1, 10);
+    const correctAnswer = String(getFactorial(num));
+    const gameQuestion = String(num);
+    return { correctAnswer, gameQuestion };
 };
 
-const task = 'Find the factorial of the number!';
+const taskText = 'Find the factorial of the number!';
 
-export default () => gameMaker(task, generateGameData);
+export default () => createGame(taskText, generateGameData);

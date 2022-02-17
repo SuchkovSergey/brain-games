@@ -9,4 +9,4 @@ lint:
 build:
 	npm run build
 fix:
-	sudo npx eslint --fix .
+	npx eslint --fix .

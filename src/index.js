@@ -1,34 +1,33 @@
 import readlineSync from 'readline-sync';
-import { car, cdr } from '@hexlet/pairs';
 
 const greeting = () => console.log('Welcome to the Brain Games!\n');
 const greetingName = userName => console.log(`Hello, ${userName}!\n`);
 
-const numberOfIteration = 3;
-const loop = (userName, generateGameData) => {
-  for (let i = 1; i <= numberOfIteration; i += 1) {
-    const gameData = generateGameData();
-    const gameQuestion = cdr(gameData);
-    console.log(`Question: ${gameQuestion}`);
-    const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = car(gameData);
-    if (answer === correctAnswer) {
-      console.log('Correct!\n');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
+const NUMBER_OF_ROUNDS = 3;
+
+const createGameRound = (userName, generateGameData) => {
+    for (let i = 1; i <= NUMBER_OF_ROUNDS; i += 1) {
+        const gameData = generateGameData();
+        const { gameQuestion, correctAnswer } = gameData;
+        console.log(`Question: ${gameQuestion}`);
+        const answer = readlineSync.question('Your answer: ');
+        if (answer === correctAnswer) {
+            console.log('Correct!\n');
+        } else {
+            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+            console.log(`Let's try again, ${userName}!`);
+            return;
+        }
     }
-  }
-  console.log(`Congratulations,${userName}!`);
+    console.log(`Congratulations,${userName}!`);
 };
 
-const gameMaker = (task, generateGameData) => {
-  greeting();
-  console.log(task);
-  const userName = readlineSync.question('May I have your name? ');
-  greetingName(userName);
-  loop(userName, generateGameData);
+const createGame = (task, generateGameData) => {
+    greeting();
+    console.log(task);
+    const userName = readlineSync.question('May I have your name? ');
+    greetingName(userName);
+    createGameRound(userName, generateGameData);
 };
 
-export default gameMaker;
+export default createGame;
