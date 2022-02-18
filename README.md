@@ -19,7 +19,7 @@ npm install
 npm run build
 ```
 
-### How to play games:
+### How to play games
 
 - **Brain-games**
 
