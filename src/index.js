@@ -5,7 +5,7 @@ const greetingName = userName => console.log(`Hello, ${userName}!\n`);
 
 const NUMBER_OF_ROUNDS = 3;
 
-const createGameRound = (userName, generateGameData) => {
+const createGameRounds = (userName, generateGameData) => {
     for (let i = 1; i <= NUMBER_OF_ROUNDS; i += 1) {
         const gameData = generateGameData();
         const { gameQuestion, correctAnswer } = gameData;
@@ -27,7 +27,7 @@ const createGame = (task, generateGameData) => {
     const userName = readlineSync.question('May I have your name? ');
     greetingName(userName);
     console.log(task);
-    createGameRound(userName, generateGameData);
+    createGameRounds(userName, generateGameData);
 };
 
 export default createGame;
