@@ -1,10 +1,11 @@
+[![Build](https://github.com/SuchkovSergey/brain-games/actions/workflows/nodejs.yml/badge.svg)](https://github.com/SuchkovSergey/brain-games/actions/workflows/nodejs.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ef294f59734c5cc91fe4/maintainability)](https://codeclimate.com/github/SuchkovSergey/brain-games/maintainability)
+
 ## Brain games
 
 ### About
 
 Brain-games is a simple cli-game
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/ef294f59734c5cc91fe4/maintainability)](https://codeclimate.com/github/SuchkovSergey/brain-games/maintainability)
 
 ### Install packages
 
